@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #eaeaea;
+            font-family: 'Lato', sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        .cv-page {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .cv-page:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+        .profile-pic {
+            border-radius: 50%;
+            max-width: 150px;
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: rotate(360deg);
+        }
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #4a90e2;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        h1::before, h2::before, h3::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #4a90e2;
+            bottom: 0;
+            left: -100%;
+            transition: left 0.4s ease;
+        }
+        h1:hover::before, h2:hover::before, h3:hover::before {
+            left: 0;
+        }
+        .section-title {
+            border-bottom: 2px solid #4a90e2;
+            margin-bottom: 15px;
+            position: relative;
+            transition: border-color 0.5s ease;
+        }
+        .section-title:hover {
+            border-color: #357abf;
+        }
+        ul.skills-list, ul.language-list, ul.portfolio-list, ul.work-history-list, ul.education-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.skills-list li, ul.language-list li, ul.portfolio-list li, ul.work-history-list li, ul.education-list li {
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        ul.skills-list li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        ul.skills-list li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        ul.skills-list li:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        ul.skills-list li:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        ul.skills-list li:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        ul.skills-list li:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+        ul.skills-list li:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+        ul.skills-list li:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+        .contact-details i {
+            color: #4a90e2;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .contact-details a {
+            color: #444;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-details a:hover {
+            color: #4a90e2;
+        }
+        .print-button {
+            background-color: #4a90e2;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            width: 100%;
+            transition: background-color 0.5s ease, transform 0.3s ease;
+        }
+        .print-button:hover {
+            background-color: #357abf;
+            transform: scale(1.05);
+        }
+        .section-content {
+            margin-top: 15px;
+            transition: color 0.5s ease;
+        }
+        .section-content:hover {
+            color: #357abf;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container cv-page">
+    <button class="print-button" onclick="window.print();">
+        <i class="fa fa-print"></i> Print
+    </button>
+
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <img src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t1.6435-9/67309506_1071094453079561_6922671546603405312_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeFOdJUR-bDP31SQFizjU5JG4b23ZbJ6Nerhvbdlsno16tbN8Kaql5ks4u4T_f_BduHPB8DyLy4ee1Ce2CGVdkiV&_nc_ohc=QkJq2USRJrwQ7kNvgG_GsvB&_nc_ht=scontent.fmnl9-3.fna&oh=00_AYAuKlJGD8snIf34Q73hAQhGOPGODRXgSMurNiPNWwGFEA&oe=66EB7A42" alt="Profile Picture" class="profile-pic img-fluid">
+        </div>
+        <div class="col-md-9">
+            <h1>Nahyan Eftekharian Jahromi</h1>
+            <h2>Web Developer, Cyber Security</h2>
+            <div class="contact-details">
+                <p><i class="fa fa-envelope"></i> <a href="mailto:eftekharianjahromi.nahyan@ue.edu.ph">eftekharianjahromi.nahyan@ue.edu.ph</a></p>
+                <p><i class="fa fa-phone"></i> <a href="tel:+639207476315">+639207476315</a></p>
+                <p><i class="fa fa-map-marker"></i> Caloocan, Philippines</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <section>
+        <h3 class="section-title">Profile</h3>
+        <p class="section-content">
+            A passionate web developer with over 5 years of experience in building dynamic and responsive websites. Proficient in HTML, CSS, JavaScript, and various web frameworks. In addition to web development, I have experience in cybersecurity, including securing web applications, performing vulnerability assessments, and implementing best practices for data protection. Seeking to leverage my technical skills, creativity, and cybersecurity knowledge in a challenging environment.
+        </p>
+    </section>
+
+    <section>
+        <h3 class="section-title">Technical Skills</h3>
+        <ul class="skills-list section-content">
+            <li><i class="fa fa-check"></i> HTML, CSS, JavaScript</li>
+            <li><i class="fa fa-check"></i> Bootstrap, React</li>
+            <li><i class="fa fa-check"></i> PHP, Python</li>
+            <li><i class="fa fa-check"></i> SQL, MySQL</li>
+            <li><i class="fa fa-check"></i> Git, Docker</li>
+            <li><i class="fa fa-check"></i> Security Assessment</li>
+            <li><i class="fa fa-check"></i> Vulnerability Testing</li>
+            <li><i class="fa fa-check"></i> Data Protection</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="section-title">Portfolio & Social Media</h3>
+        <ul class="portfolio-list section-content">
+            <li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/noturarab" target="_blank">Facebook</a></li>
+            <li><i class="fa fa-github"></i> <a href="https://github.com" target="_blank">GitHub</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="section-title">Work History</h3>
+        <ul class="work-history-list section-content">
+            <li><strong>Web Developer</strong> - <em>Freelance</em> (2019 - Present)</li>
+            <li><strong>Cybersecurity Specialist</strong> - <em>Freelance</em> (2017 - 2019)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 class="section-title">Education</h3>
+        <ul class="education-list section-content">
+            <li><strong>Bachelor's Degree in Computer Science University of the East (2022 - present)</strong></li>
+            <li><strong>Technological Institute of the Philippines (2020-2022)</strong></li>
+            <li><strong>Arellano University (2019-2020)</strong></li>
+            <li><strong>Lyceum of the Philippines (2018-2019)</strong></li>
+            <li><strong>Timoteo Paez Integrated High School (2014-2018)</strong></li>
+            <li><strong>T. Paez Elementary School (2007-2014)</strong></li>
+        </ul>
+    </section>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('ul.skills-list li, ul.language-list li, ul.portfolio-list li, ul.work-history-list li, ul.education-list li');
+        items.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            item.classList.add('animated', 'fadeInUp');
+        });
+    });
+</script>
+
+</body>
+</html>
